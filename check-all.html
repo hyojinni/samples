@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>checkbox with box and all checked</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+<style>
+    .welfare-kit-box { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; width: 100%; background-color: #f1f5f9; }
+    .welfare-kit-box.is-active { border: 1px solid #4158eb; }
+</style>
+</head>
+<body>
+    <div>
+        <div class="flex justify-between items-center mb-3">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="check-all">
+                <label class="form-check-label" for="check-all">전체선택</label>
+            </div>
+            <div id="check-count">1/14</div> 
+        </div>
+        <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+            <li class="flex flex-col items-center justify-content-between gap-1 rounded-2">
+                <div class="welfare-kit-box">
+                    <div class="form-check warning self-end">
+                        <input class="form-check-input" type="checkbox" id="check-item1">
+                    </div>
+                    <div class="mx-auto">
+                        <i class="fa-solid fa-bath"></i>
+                    </div>
+                    <label for="check-item1" class="welfare-kit-name">bath</label>
+                </div>
+                <button type="button" class="w-full p-2 bg-slate-300" data-bs-toggle="modal" data-bs-target="#welfare-kit1">자세히보기</button>
+            </li>   
+            <li class="flex flex-col items-center justify-content-between gap-1 rounded-2">
+                <div class="welfare-kit-box">
+                    <div class="form-check warning self-end">
+                        <input class="form-check-input" type="checkbox" id="check-item2">
+                    </div>
+                    <div class="mx-auto">
+                        <i class="fa-solid fa-bug"></i>
+                    </div>
+                    <label for="check-item2" class="welfare-kit-name">bug</label>
+                </div>
+                <button type="button" class="w-full p-2 bg-slate-300" data-bs-toggle="modal" data-bs-target="#welfare-kit2">자세히보기</button>
+            </li>   
+            <li class="flex flex-col items-center justify-content-between gap-1 rounded-2">
+                <div class="welfare-kit-box">
+                    <div class="form-check warning self-end">
+                        <input class="form-check-input" type="checkbox" id="check-item3">
+                    </div>
+                    <div class="mx-auto">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <label for="check-item3" class="welfare-kit-name">code</label>
+                </div>
+                <button type="button" class="w-full p-2 bg-slate-300" data-bs-toggle="modal" data-bs-target="#welfare-kit3">자세히보기</button>
+            </li>   
+            <li class="flex flex-col items-center justify-content-between gap-1 rounded-2">
+                <div class="welfare-kit-box">
+                    <div class="form-check warning self-end">
+                        <input class="form-check-input" type="checkbox" id="check-item4">
+                    </div>
+                    <div class="mx-auto">
+                        <i class="fa-solid fa-keyboard"></i>
+                    </div>
+                    <label for="check-item4" class="welfare-kit-name">keyboard</label>
+                </div>
+                <button type="button" class="w-full p-2 bg-slate-300" data-bs-toggle="modal" data-bs-target="#welfare-kit4">자세히보기</button>
+            </li>   
+            <li class="flex flex-col items-center justify-content-between gap-1 rounded-2">
+                <div class="welfare-kit-box">
+                    <div class="form-check warning self-end">
+                        <input class="form-check-input" type="checkbox" id="check-item5">
+                    </div>
+                    <div class="mx-auto">
+                        <i class="fa-solid fa-sitemap"></i>
+                    </div>
+                    <label for="check-item5" class="welfare-kit-name">sitemap</label>
+                </div>
+                <button type="button" class="w-full p-2 bg-slate-300" data-bs-toggle="modal" data-bs-target="#welfare-kit5">자세히보기</button>
+            </li>   
+            <li class="flex flex-col items-center justify-content-between gap-1 rounded-2">
+                <div class="welfare-kit-box">
+                    <div class="form-check warning self-end">
+                        <input class="form-check-input" type="checkbox" id="check-item6">
+                    </div>
+                    <div class="mx-auto">
+                        <i class="fa-solid fa-file-code"></i>
+                    </div>
+                    <label for="check-item6" class="welfare-kit-name">code</label>
+                </div>
+                <button type="button" class="w-full p-2 bg-slate-300" data-bs-toggle="modal" data-bs-target="#welfare-kit6">자세히보기</button>
+            </li>   
+            <li class="flex flex-col items-center justify-content-between gap-1 rounded-2">
+                <div class="welfare-kit-box">
+                    <div class="form-check warning self-end">
+                        <input class="form-check-input" type="checkbox" id="check-item7">
+                    </div>
+                    <div class="mx-auto">
+                        <i class="fa-solid fa-shield"></i>
+                    </div>
+                    <label for="check-item7" class="welfare-kit-name">shield</label>
+                </div>
+                <button type="button" class="w-full p-2 bg-slate-300" data-bs-toggle="modal" data-bs-target="#welfare-kit7">자세히보기</button>
+            </li>   
+            <li class="flex flex-col items-center justify-content-between gap-1 rounded-2">
+                <div class="welfare-kit-box">
+                    <div class="form-check warning self-end">
+                        <input class="form-check-input" type="checkbox" id="check-item8">
+                    </div>
+                    <div class="mx-auto">
+                        <i class="fa-solid fa-user-secret"></i>
+                    </div>
+                    <label for="check-item8" class="welfare-kit-name">secret</label>
+                </div>
+                <button type="button" class="w-full p-2 bg-slate-300" data-bs-toggle="modal" data-bs-target="#welfare-kit8">자세히보기</button>
+            </li>   
+            <li class="flex flex-col items-center justify-content-between gap-1 rounded-2">
+                <div class="welfare-kit-box">
+                    <div class="form-check warning self-end">
+                        <input class="form-check-input" type="checkbox" id="check-item9">
+                    </div>
+                    <div class="mx-auto">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <label for="check-item9" class="welfare-kit-name">microchip</label>
+                </div>
+                <button type="button" class="w-full p-2 bg-slate-300" data-bs-toggle="modal" data-bs-target="#welfare-kit9">자세히보기</button>
+            </li>   
+            <li class="flex flex-col items-center justify-content-between gap-1 rounded-2">
+                <div class="welfare-kit-box">
+                    <div class="form-check warning self-end">
+                        <input class="form-check-input" type="checkbox" id="check-item10">
+                    </div>
+                    <div class="mx-auto">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <label for="check-item10" class="welfare-kit-name">cubes</label>
+                </div>
+                <button type="button" class="w-full p-2 bg-slate-300" data-bs-toggle="modal" data-bs-target="#welfare-kit10">자세히보기</button>
+            </li>   
+            <li class="flex flex-col items-center justify-content-between gap-1 rounded-2">
+                <div class="welfare-kit-box">
+                    <div class="form-check warning self-end">
+                        <input class="form-check-input" type="checkbox" id="check-item11">
+                    </div>
+                    <div class="mx-auto">
+                        <i class="fa-solid fa-mug-saucer"></i>
+                    </div>
+                    <label for="check-item11" class="welfare-kit-name">mug</label>
+                </div>
+                <button type="button" class="w-full p-2 bg-slate-300" data-bs-toggle="modal" data-bs-target="#welfare-kit11">자세히보기</button>
+            </li>   
+            <li class="flex flex-col items-center justify-content-between gap-1 rounded-2">
+                <div class="welfare-kit-box">
+                    <div class="form-check warning self-end">
+                        <input class="form-check-input" type="checkbox" id="check-item12">
+                    </div>
+                    <div class="mx-auto">
+                        <i class="fa-solid fa-barcode"></i>
+                    </div>
+                    <label for="check-item12" class="welfare-kit-name">barcode</label>
+                </div>
+                <button type="button" class="w-full p-2 bg-slate-300" data-bs-toggle="modal" data-bs-target="#welfare-kit12">자세히보기</button>
+            </li>   
+            <li class="flex flex-col items-center justify-content-between gap-1 rounded-2">
+                <div class="welfare-kit-box">
+                    <div class="form-check warning self-end">
+                        <input class="form-check-input" type="checkbox" id="check-item13">
+                    </div>
+                    <div class="mx-auto">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </div>
+                    <label for="check-item13" class="welfare-kit-name">qrcode</label>
+                </div>
+                <button type="button" class="w-full p-2 bg-slate-300" data-bs-toggle="modal" data-bs-target="#welfare-kit13">자세히보기</button>
+            </li>  
+        </ul>
+    </div>
+
+    <script>
+         
+        (function() {
+           
+
+            const checkAllItems = document.querySelector("#check-all");
+            const welfareKitBoxes = document.querySelectorAll(".welfare-kit-box");
+            const checks = document.querySelectorAll(".welfare-kit-box .form-check-input");
+            const checkCnt = document.querySelector('#check-count');
+            let boxAllLen = welfareKitBoxes.length;
+            let chkLen = checks.checked;
+
+
+            // checks.forEach((chk) => {
+            //     chk.addEventListener("change", (e) => {
+            //         const current = e.currentTarget;
+            //         const parent = current.closest('.welfare-kit-box');
+            //         if (current.checked) {
+            //             parent.classList.add('is-active');
+            //         } else {
+            //             parent.classList.remove('is-active');
+            //         }
+            //     });
+            // });
+
+            welfareKitBoxes.forEach((box) => {
+                const checkbox = box.querySelector('.form-check-input');
+                box.addEventListener("click", () => {
+                    checkbox.checked = !checkbox.checked;
+                    toggleActiveClass(box, checkbox.checked);
+                });
+
+                checkbox.addEventListener("change", () => {
+                    checkbox.checked = !checkbox.checked;
+                    toggleActiveClass(box, checkbox.checked);
+                });
+            });
+
+            function toggleActiveClass(element, isChecked) {
+                if (isChecked) {
+                    element.classList.add('is-active');
+                } else {
+                    element.classList.remove('is-active');
+                }
+            }
+
+            checkAllItems.addEventListener('change', (e) => {
+                const current = e.currentTarget;
+                checks.forEach(function (item) {
+                    item.checked = current.checked;
+                    const parent = item.closest('.welfare-kit-box');
+                    if (current.checked) {
+                        parent.classList.add('is-active');
+                    } else {
+                        parent.classList.remove('is-active');
+                    }
+                });
+            });
+
+
+
+        })();
+    </script>
+</body>
+</html>
